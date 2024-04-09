@@ -19,6 +19,12 @@ print(f"Soma: {soma}")
 print(f"Media: {media}")
 print(f"Produto: {produto}")
 
+
+
+
+
+
+
 if(numero1 > numero2):
     print(f"Maior número: {numero1}")
 else:
