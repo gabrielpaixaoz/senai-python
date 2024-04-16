@@ -3,9 +3,11 @@ import os
 os.system("clear")
 
 nota : float = -1
-soma : float = 0
+soma : float =  0
 
-for i in range(1,4):
+QUANTIDADE_DE_NOTAS = 3
+
+for i in range(QUANTIDADE_DE_NOTAS):
     while True:
         nota = float(input("Digite a Nota: "))
         if nota < 0 or nota > 10:
@@ -14,7 +16,7 @@ for i in range(1,4):
             soma += nota #false
             break
 
-media = soma / 2\
+media = soma / QUANTIDADE_DE_NOTAS
 
 print(f"Média: {media}")
 
