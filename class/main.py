@@ -45,6 +45,7 @@ def verificar_aviao():
         print(f"Avião nº {avioes[i]}")
     numero = input("Informe o número do avião: ")
     indice_aviao = avioes.index(numero)
+    indice_aviao + 1
     print(indice_aviao)
     
     def filtrar_aviao(reservas, numero):
@@ -63,8 +64,14 @@ def verificar_aviao():
     
     
 
-#def verificar_passageiro():
-    
+def verificar_passageiro():
+    passageiro = str(input("Digite o nome do passageiro: "))
+    def filtrar_passageiro(reservas, passageiro):
+        return [obj for obj in reservas if obj.nome_passageiro == passageiro]
+    aviao_filtrados = filtrar_passageiro(reservas,passageiro)
+
+    print(aviao_filtrados)
+
 
 
 
