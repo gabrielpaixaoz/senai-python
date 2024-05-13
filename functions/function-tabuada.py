@@ -52,11 +52,17 @@ def verificar_aviao():
     indice_aviao = avioes.index(numero)
     indice_aviao + 1
     
+    if (len(reservas[indice_aviao].nome_passageiro)) == 0:
+        print("Não há reservas para este avião")
+        return
+    
     def filtrar_aviao(reservas, numero):
         return [obj.nome_passageiro for obj in reservas if obj.numero_aviao == numero]
+    
 
     nomes_filtrados = filtrar_aviao(reservas,reservas[indice_aviao].numero_aviao)
 
+    print(nomes_filtrados)
     print(f"Reservas no avião {numero}: ")
     for i in range(len(nomes_filtrados)):
         print(f"{i + 1}º Passageiro: {nomes_filtrados[i]}")
@@ -81,7 +87,8 @@ def menu():
     print("1. Registrar número de cada avião")
     print("2. Registrar quantitativo de assentos disponíveis em cada avião")
     print("3. Reservar passagem aérea")
-    print("4. Encerrar")
+    print("4. Verificar avião")
+    print("5")
     print(avioes)
     print(assentos_disponiveis)
 
