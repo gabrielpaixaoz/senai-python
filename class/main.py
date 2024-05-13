@@ -43,12 +43,19 @@ def verificar_aviao():
     print("Aviões disponíveis: ")
     for i in range(4):
         print(f"Avião nº {avioes[i]}")
-    numero_aviao = input("Informe o número do avião: ")
-    if numero_aviao not in avioes:
-        print("Este avião não existe!")
-        return
-    indice_aviao = avioes.index(numero_aviao)
+    numero = input("Informe o número do avião: ")
+    indice_aviao = avioes.index(numero)
     print(indice_aviao)
+    
+    def filtrar_aviao(reservas, numero):
+        return [obj.nome_passageiro for obj in reservas if obj.numero_aviao == numero]
+
+    nomes_filtrados = filtrar_aviao(reservas,reservas[indice_aviao].numero_aviao)
+
+    print(nomes_filtrados)
+
+    for info in reservas:
+        print(f"aviao: {info.numero_aviao}, passageiro:{info.nome_passageiro}")
     
 
     
