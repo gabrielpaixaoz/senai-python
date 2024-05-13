@@ -44,6 +44,11 @@ def verificar_aviao():
     for i in range(4):
         print(f"Avião nº {avioes[i]}")
     numero = input("Informe o número do avião: ")
+
+    if numero not in avioes:
+        print("Este avião não existe!")
+        return
+    
     indice_aviao = avioes.index(numero)
     indice_aviao + 1
     
