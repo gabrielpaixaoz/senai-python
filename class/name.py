@@ -13,7 +13,9 @@ for i in range(3):
 def filtrar_por_idade(identidades, numero):
   return [obj.name for obj in identidades if obj.age == numero]
 
-nomes_filtrados = filtrar_por_idade(identidades,20)
+numero = int(input("Digite o número escolhido: "))
+
+nomes_filtrados = filtrar_por_idade(identidades,identidades[numero].age)
 
 print(nomes_filtrados)
 
