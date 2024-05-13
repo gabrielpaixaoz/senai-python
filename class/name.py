@@ -10,24 +10,30 @@ for i in range(3):
   age = int(input("Digite sua idade: "))
   identidades.append(Person(name,age))
 
+def filtrar_por_idade(identidades, numero):
+  return [obj.name for obj in identidades if obj.age == numero]
+
+nomes_filtrados = filtrar_por_idade(identidades,20)
+
+print(nomes_filtrados)
 
 
-for pessoa in identidades:
-   print(f"Nome: {pessoa.name}, Idade: {pessoa.age}")
+#for pessoa in identidades:
+ #  print(f"Nome: {pessoa.name}, Idade: {pessoa.age}")
 
 
-escolha = int(input("Escolha a idade desejada: "))
+#escolha = int(input("Escolha a idade desejada: "))
 
 
 
-if escolha == identidades[0].age:
-  print(identidades[0].age)
+#if escolha == identidades[0].age:
+ # print(identidades[0].age)
 
-elif escolha == identidades[1].age:
-  print(identidades[1].age)
+#elif escolha == identidades[1].age:
+ # print(identidades[1].age)
 
-elif escolha == identidades[2].age:
-  print(identidades[2].age)
+#elif escolha == identidades[2].age:
+ # print(identidades[2].age)
 
 
 
