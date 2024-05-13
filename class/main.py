@@ -72,6 +72,9 @@ def verificar_passageiro():
 
     print(aviao_filtrados)
 
+    for pessoa in aviao_filtrados:
+     print(f"Nome: {pessoa.nome_passageiro}, Idade: {pessoa.numero_aviao}")
+
 
 
 
