@@ -42,9 +42,16 @@ def realizar_reserva():
 def verificar_aviao():
     print("Aviões disponíveis: ")
     for i in range(4):
-        print(f"Avião nº{avioes[i]}")
-    aviao_escolhido = int(input("Digite o número do avião desejado: "))
-        print(f"nomes: {reservas[aviao_escolhido].nome_passageiro}")
+        print(f"Avião nº {avioes[i]}")
+    numero_aviao = input("Informe o número do avião: ")
+    if numero_aviao not in avioes:
+        print("Este avião não existe!")
+        return
+    indice_aviao = avioes.index(numero_aviao)
+    print(indice_aviao)
+    
+
+    
     
     
     
@@ -83,6 +90,3 @@ while True:
         break
     else:
         print("Opção inválida! Por favor, escolha uma opção válida.")
-
-
-
