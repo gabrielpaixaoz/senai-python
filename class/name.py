@@ -5,7 +5,7 @@ class Person:
 
 identidades = []
 
-for i in range(4):
+for i in range(3):
   name = input("Digite o nome: ")
   age = int(input("Digite sua idade: "))
   identidades.append(Person(name,age))
@@ -13,6 +13,25 @@ for i in range(4):
 
 
 for pessoa in identidades:
-    print(f"Nome: {pessoa[2].name}, Idade: {pessoa[2].age}")
+   print(f"Nome: {pessoa.name}, Idade: {pessoa.age}")
 
-#print(f"Nome: {identidades[2].name}, Idade: {identidades[2].age}")
+
+escolha = int(input("Escolha a idade desejada: "))
+
+
+
+if escolha == identidades[0].age:
+  print(identidades[0].age)
+
+elif escolha == identidades[1].age:
+  print(identidades[1].age)
+
+elif escolha == identidades[2].age:
+  print(identidades[2].age)
+
+
+
+# if identidades[1].age == 20:
+ # print("Este número é 20!")
+# else:
+ # print("Este número não é 20!")
