@@ -1,3 +1,4 @@
+import os
 class Reserva:
     def __init__(self, numero_aviao, nome_passageiro):
         self.numero_aviao = numero_aviao
@@ -40,6 +41,8 @@ def realizar_reserva():
 
 
 def verificar_aviao():
+    def filtrar_aviao(reservas, numero):
+        return [obj.nome_passageiro for obj in reservas if obj.numero_aviao == numero]
     print("Aviões disponíveis: ")
     for i in range(4):
         print(f"Avião nº {avioes[i]}")
@@ -48,22 +51,19 @@ def verificar_aviao():
         print("Este avião não existe!")
         return
     indice_aviao = avioes.index(numero)
-    indice_aviao + 1
-    print(indice_aviao)
-    
-    def filtrar_aviao(reservas, numero):
-        return [obj.nome_passageiro for obj in reservas if obj.numero_aviao == numero]
+    indice_aviao + 2
+
+
     
 
     if 0 <= indice_aviao < len(reservas):
 
         nomes_filtrados = filtrar_aviao(reservas,reservas[indice_aviao].numero_aviao)
-        print(nomes_filtrados)
+        for i in range(len(nomes_filtrados)):
+            print(f"{i + 1}º Passageiro: {nomes_filtrados[i]}")
     else:
-        print("Índice de avião inválido.")
+        print("Não há reservas realizadas para este avião!")
 
-    for info in reservas:
-        print(f"aviao: {info.numero_aviao}, passageiro:{info.nome_passageiro}")
     
 
     
