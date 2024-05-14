@@ -1,4 +1,5 @@
 import os
+os.system("cls || clear")
 class Reserva:
     def __init__(self, numero_aviao, nome_passageiro):
         self.numero_aviao = numero_aviao
@@ -10,16 +11,19 @@ assentos_disponiveis = [0] * 4
 reservas = []
 
 def registrar_avioes():
+    os.system("cls || clear")
     print("Informe o número de cada avião:")
     for i in range(4):
         avioes[i] = input(f"Avião {i+1}: ")
 
 def registrar_assentos_disponiveis():
+    os.system("cls || clear")
     print("Informe a quantidade de assentos disponíveis para cada avião:")
     for i in range(4):
         assentos_disponiveis[i] = int(input(f"Assentos disponíveis para o avião {avioes[i]}: "))
 
 def realizar_reserva():
+    os.system("cls || clear")
     if len(reservas) >= 10:
         print("Limite de reservas atingido!")
         return
@@ -41,6 +45,7 @@ def realizar_reserva():
 
 
 def verificar_aviao():
+    os.system("cls || clear")
     def filtrar_aviao(reservas, numero):
         return [obj.nome_passageiro for obj in reservas if obj.numero_aviao == numero]
     print("Aviões disponíveis: ")
@@ -51,7 +56,7 @@ def verificar_aviao():
         print("Este avião não existe!")
         return
     indice_aviao = avioes.index(numero)
-    indice_aviao + 2
+    
 
 
     
@@ -72,15 +77,18 @@ def verificar_aviao():
     
 
 def verificar_passageiro():
+    os.system("cls || clear")
     passageiro = str(input("Digite o nome do passageiro: "))
     def filtrar_passageiro(reservas, passageiro):
         return [obj for obj in reservas if obj.nome_passageiro == passageiro]
     aviao_filtrados = filtrar_passageiro(reservas,passageiro)
 
-    print(aviao_filtrados)
-
-    for pessoa in aviao_filtrados:
-     print(f"Nome: {pessoa.nome_passageiro}, Idade: {pessoa.numero_aviao}")
+    if len(aviao_filtrados) <= 0:
+        print("Não há reservas realizadas para este passageiro!")
+    else:
+        print("=== Reservas realizadas ===")
+        for pessoa in aviao_filtrados:
+            print(f"Reserva para o avião nº: {pessoa.numero_aviao}")
 
 
 
@@ -90,7 +98,10 @@ def menu():
     print("1. Registrar número de cada avião")
     print("2. Registrar quantitativo de assentos disponíveis em cada avião")
     print("3. Reservar passagem aérea")
-    print("4. Encerrar")
+    print("4. Verificar avião")
+    print("5. Verificar passageiro")
+    print("6. Encerrar")
+
     print(avioes)
     print(assentos_disponiveis)
 

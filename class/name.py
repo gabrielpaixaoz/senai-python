@@ -7,7 +7,8 @@ identidades = []
 
 for i in range(3):
   name = input("Digite o nome: ")
-  age = int(input("Digite sua idade: "))
+  for i in range(3):
+    age = int(input("Digite sua idade: "))
   identidades.append(Person(name,age))
 
 def filtrar_por_idade(identidades, numero):
