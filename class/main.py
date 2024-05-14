@@ -42,15 +42,45 @@ def realizar_reserva():
 def verificar_aviao():
     print("Aviões disponíveis: ")
     for i in range(4):
+<<<<<<< HEAD
         print(f"Avião nº{avioes[i]}")
     aviao_escolhido = int(input("Digite o número do avião desejado: "))
     print(aviao_escolhido)
+=======
+        print(f"Avião nº {avioes[i]}")
+    numero = input("Informe o número do avião: ")
+    indice_aviao = avioes.index(numero)
+    indice_aviao + 1
+    print(indice_aviao)
+    
+    def filtrar_aviao(reservas, numero):
+        return [obj.nome_passageiro for obj in reservas if obj.numero_aviao == numero]
+
+    nomes_filtrados = filtrar_aviao(reservas,reservas[indice_aviao].numero_aviao)
+
+    print(nomes_filtrados)
+
+    for info in reservas:
+        print(f"aviao: {info.numero_aviao}, passageiro:{info.nome_passageiro}")
+    
+
+    
+>>>>>>> fc00776ea379e39fcaa5b62330b664dacaaf375a
     
     
     
 
-#def verificar_passageiro():
-    
+def verificar_passageiro():
+    passageiro = str(input("Digite o nome do passageiro: "))
+    def filtrar_passageiro(reservas, passageiro):
+        return [obj for obj in reservas if obj.nome_passageiro == passageiro]
+    aviao_filtrados = filtrar_passageiro(reservas,passageiro)
+
+    print(aviao_filtrados)
+
+    for pessoa in aviao_filtrados:
+     print(f"Nome: {pessoa.nome_passageiro}, Idade: {pessoa.numero_aviao}")
+
 
 
 
@@ -83,6 +113,3 @@ while True:
         break
     else:
         print("Opção inválida! Por favor, escolha uma opção válida.")
-
-
-
