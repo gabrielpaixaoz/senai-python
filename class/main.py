@@ -44,7 +44,7 @@ def verificar_aviao():
     for i in range(4):
         print(f"Avião nº{avioes[i]}")
     aviao_escolhido = int(input("Digite o número do avião desejado: "))
-        print(f"nomes: {reservas[aviao_escolhido].nome_passageiro}")
+    print(aviao_escolhido)
     
     
     
