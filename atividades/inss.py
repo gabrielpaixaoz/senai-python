@@ -18,6 +18,9 @@ def INSS(salario):
     elif salario >= 2203.49 and salario < 3305.22:
         desconto = salario * 0.12
         return salario - desconto
+    elif salario >= 3305.23 and salario < 6433.57:
+        desconto = salario * 0.14
+        return salario - desconto
         
         
     
