@@ -13,14 +13,34 @@ def INSS(salario):
         desconto = salario * 0.075
         return salario - desconto
     elif salario >= 1101 and salario < 2203.48:
-        desconto = salario * 0.9
+        desconto = salario * 0.09
         return salario - desconto
     elif salario >= 2203.49 and salario < 3305.22:
         desconto = salario * 0.12
         return salario - desconto
-    elif salario >= 3305.23 and salario < 6433.57:
+    elif salario >= 3305.23:
         desconto = salario * 0.14
+        if desconto >= 854.36:
+            desconto = 854.36    
         return salario - desconto
+
+def IRRF(salario):
+    if salario <= 2259.20:
+        desconto = 0
+        return salario - desconto
+    elif salario >= 2259.20 and salario <= 2826.65:
+        desconto = salario * 0.075
+        return salario - desconto
+    elif salario >= 2826.66 and salario <= 3751.05:
+        desconto = salario * 0.15
+        return salario - desconto
+    elif salario >= 3751.06 and salario <= 4664.68:
+        desconto = salario * 0.225
+        return salario - desconto
+    elif salario >= 4664.69:
+        desconto = salario * 0.275
+        return salario - desconto
+
         
         
     
@@ -28,9 +48,11 @@ def INSS(salario):
 if loginCorreto == loginUsuario and senhaUsuario == senhaCorreta:
     print("Login acessado!")
     salario_base = int(input("Digite seu salário: "))
-    salario_inss = INSS(salario_base)
+    salario_inss = salario_base - INSS(salario_base)
+    salario_irrf = salario_base - IRRF(salario_base)
     print(salario_base)
     print(salario_inss)
+    print(salario_irrf)
     
 else:
     print("errado")
