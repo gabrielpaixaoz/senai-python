@@ -61,11 +61,14 @@ if loginCorreto == loginUsuario and senhaUsuario == senhaCorreta:
     desconto_irrf = salario_base - IRRF(salario_base)
     desconto_transporte = salario_base - TRSS(salario_base,vale_tranposrte)
     desconto_beneficio = salario_base - vale_refeicao(salario_base,valor_beneficio)
-    print(salario_base)
-    print(desconto_inss)
-    print(desconto_irrf)
-    print(desconto_transporte)
-    print(desconto_beneficio)
+    
+    print(f"Salário base: {salario_base}")
+    print(f"Desconto INSS: {desconto_inss}")
+    print(f"Desconto IRFF: {desconto_irrf}")
+    print(f"Desconto vale transporte: {desconto_transporte}")
+    print(f"Desconto benefício: {desconto_beneficio}")
+    
+    
     
 else:
     print("errado")
