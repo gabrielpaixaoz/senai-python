@@ -67,7 +67,9 @@ if loginCorreto == loginUsuario and senhaUsuario == senhaCorreta:
     print(f"Desconto IRFF: {desconto_irrf}")
     print(f"Desconto vale transporte: {desconto_transporte}")
     print(f"Desconto benefício: {desconto_beneficio}")
-    
+    print("========================================")
+    print(f"Valor total: {salario_base - desconto_inss - desconto_irrf - desconto_transporte - desconto_beneficio - 150}")
+
     
     
 else:
