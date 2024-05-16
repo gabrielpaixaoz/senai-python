@@ -47,18 +47,25 @@ def TRSS(salario,resposta):
         return salario - desconto
         
     
+def vale_refeicao(salario,beneficio):
+    desconto = valor_beneficio * 0.20
+    return salario - desconto 
+
 
 if loginCorreto == loginUsuario and senhaUsuario == senhaCorreta:
     print("Login acessado!")
     salario_base = int(input("Digite seu salário: "))
     vale_tranposrte = input("Deseja vale transporte?(s/n): ")
-    salario_inss = salario_base - INSS(salario_base)
-    salario_irrf = salario_base - IRRF(salario_base)
-    salario_transporte = salario_base - TRSS(salario_base,vale_tranposrte)
+    valor_beneficio = int(input("Digite o valor vale refeição fornecido pela empresa: "))
+    desconto_inss = salario_base - INSS(salario_base)
+    desconto_irrf = salario_base - IRRF(salario_base)
+    desconto_transporte = salario_base - TRSS(salario_base,vale_tranposrte)
+    desconto_beneficio = salario_base - vale_refeicao(salario_base,valor_beneficio)
     print(salario_base)
-    print(salario_inss)
-    print(salario_irrf)
-    print(salario_transporte)
+    print(desconto_inss)
+    print(desconto_irrf)
+    print(desconto_transporte)
+    print(desconto_beneficio)
     
 else:
     print("errado")
