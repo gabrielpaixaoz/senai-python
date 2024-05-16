@@ -41,18 +41,24 @@ def IRRF(salario):
         desconto = salario * 0.275
         return salario - desconto
 
-        
+def TRSS(salario,resposta):
+    if resposta == 's':
+        desconto = salario * 0.06
+        return salario - desconto
         
     
 
 if loginCorreto == loginUsuario and senhaUsuario == senhaCorreta:
     print("Login acessado!")
     salario_base = int(input("Digite seu salário: "))
+    vale_tranposrte = input("Deseja vale transporte?(s/n): ")
     salario_inss = salario_base - INSS(salario_base)
     salario_irrf = salario_base - IRRF(salario_base)
+    salario_transporte = salario_base - TRSS(salario_base,vale_tranposrte)
     print(salario_base)
     print(salario_inss)
     print(salario_irrf)
+    print(salario_transporte)
     
 else:
     print("errado")
