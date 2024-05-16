@@ -73,4 +73,4 @@ if loginCorreto == loginUsuario and senhaUsuario == senhaCorreta:
     
     
 else:
-    print("errado")
+    print("Login errado")
