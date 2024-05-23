@@ -1,0 +1,3 @@
+Nome: daed, Idade: 213, Peso: 123.2, Altura: 123.2
+Nome: daed, Idade: 232, Peso: 39.0, Altura: 20.2
+Nome: daeoijd, Idade: 3, Peso: 312.2, Altura: 1.9

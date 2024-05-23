@@ -1,0 +1,1 @@
+Nome:teste, Autor:testou, Categoria:testara, Preço:213.0,

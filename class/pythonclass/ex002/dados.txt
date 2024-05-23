@@ -1,0 +1,3 @@
+Nome: gabriel, Idade: 20, Peso: 123.0, Altura: 3123.0
+Nome: daepokd, Idade: 213123, Peso: 3123.0, Altura: 123.0
+Nome: opa, Idade: 1231023, Peso: 123.0, Altura: 213.0
